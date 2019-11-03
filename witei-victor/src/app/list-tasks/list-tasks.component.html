@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-12">
+        <h2 class="witei-color-text">Listado tareas completadas</h2>
+        <table class="table table-hover">
+            <div *ngIf="!data.length">Cargando listado...</div>
+            <thead>
+                <tr>
+                    <th scope="col">Contacto</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Propiedad</th>
+                    <th scope="col">Propietario</th>
+                    <th scope="col">Trabajador</th>
+                    <th scope="col">Detalles</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let task of data">
+                    <th scope="row">{{task.contact}}</th>
+                    <td>{{task.kind}}</td>
+                    <td>{{task.due}}</td>
+                    <td>{{task.house}}</td>
+                    <td>{{task.owner}}</td>
+                    <td>{{task.worker}}</td>
+                    <td>{{task.details}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
